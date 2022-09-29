@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: Home(),
     );
@@ -25,7 +26,8 @@ class Home extends StatelessWidget {
         title: Text('my first apk'),
         centerTitle: true,
       ),
-      body: Row(
+      body:
+        Row(
         children: [
           Text('helo africa'),
           ElevatedButton(
@@ -35,7 +37,19 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.lightBlue,
             padding: EdgeInsets.all(30.0),
-            child: Text('le containeur'),
+            child: Center(
+                child: Card(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                  Text('helo africa'),
+                  ElevatedButton(onPressed: (){}, child: Text('coucou'),),
+                    ],
+                  ),
+                ),
+            ),
           )
         ],
       ),
@@ -45,6 +59,12 @@ class Home extends StatelessWidget {
         backgroundColor: Color.fromRGBO(50, 100, 80, 1),
       ),
     );
+  }
+  Image fromNetwork(Size size){
+    return Image.network('https://images.pexels.com/photos/8758386/pexels-photo-8758386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          height: size.height,
+           width: size.width,
+           fit: BoxFit.cover,);
   }
 }
 
