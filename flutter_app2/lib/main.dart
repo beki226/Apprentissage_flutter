@@ -59,7 +59,7 @@ class Home extends StatelessWidget{
                   width: 300,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage('https://images.pexels.com/photos/13461809/pexels-photo-13461809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                      image: AssetImage('assets/Lenovo.png'),
                       fit: BoxFit.cover,
                     ),
                     boxShadow: [
@@ -108,7 +108,7 @@ class Home extends StatelessWidget{
       );
   }
   Image fromNetwork(double height, double width){
-    return Image.network('https://images.pexels.com/photos/8758386/pexels-photo-8758386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    return Image.asset('Lenovo.PNG',
           height: height,
           width: width,
     );
@@ -119,10 +119,12 @@ class Home extends StatelessWidget{
       mainAxisAlignment: MainAxisAlignment.end,
 
       children: [
-        CircleAvatar(
+        Expanded(child: CircleAvatar(
           radius: 30,
           backgroundColor: Colors.blue,
-          foregroundImage: NetworkImage('https://images.pexels.com/photos/8758386/pexels-photo-8758386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+          foregroundImage: AssetImage('assets/Lenovo.PNG'),
+        ),
+          flex: 1,
         ),
         Spacer(),
         Expanded(child: Text('Joli???',
@@ -133,8 +135,12 @@ class Home extends StatelessWidget{
           color: Colors.blue,
         ),
         ),
+          flex: 1,
         ),
-        fromAsset(200.0,200.0),
+
+        Expanded(child: fromAsset(200.0,200.0),
+        flex: 1,
+        ),
         //fromNetwork(300, 300),
       ],
     );
