@@ -140,7 +140,6 @@ class Home extends StatelessWidget {
              pubs(time: "1 An", image: "assets/pexel3.jpg", description: "Dossier classé", like: 300, comment: 250),
              pubs(time: "2 ans", image: "assets/pexel2.jpg", description: "Le style c'est lui", like: 150, comment: 30),
              pubs(time: "5 ans", image: "assets/pexel1.jpg", description: "Aucune description", like: 40, comment: 12),
-
            ],
          ),
       ),

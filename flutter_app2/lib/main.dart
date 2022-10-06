@@ -60,7 +60,7 @@ class Home extends StatelessWidget{
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/Lenovo.png'),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                     boxShadow: [
                       BoxShadow(
@@ -108,7 +108,7 @@ class Home extends StatelessWidget{
       );
   }
   Image fromNetwork(double height, double width){
-    return Image.asset('Lenovo.PNG',
+    return Image.asset('assets/Lenovo.PNG',
           height: height,
           width: width,
     );

@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('my first apk'),
+        title: Text('premiere apk'),
         centerTitle: true,
       ),
       body:
@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
           ),
           Container(
             color: Colors.lightBlue,
-            padding: EdgeInsets.all(30.0),
+            padding: EdgeInsets.all(2.0),
             child: Center(
                 child: Card(
                   child: Column(
@@ -59,12 +59,6 @@ class Home extends StatelessWidget {
         backgroundColor: Color.fromRGBO(50, 100, 80, 1),
       ),
     );
-  }
-  Image fromNetwork(Size size){
-    return Image.network('https://images.pexels.com/photos/8758386/pexels-photo-8758386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          height: size.height,
-           width: size.width,
-           fit: BoxFit.cover,);
   }
 }
 
